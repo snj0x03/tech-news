@@ -1,16 +1,10 @@
-import { useOutletContext } from 'react-router-dom';
 import { TrendingUp, Briefcase, DollarSign, Users, Target } from 'lucide-react';
 import { NewsBoard } from './NewsBoard';
 import { articles } from '../data/articles';
-
-interface LayoutContext {
-  theme: 'light' | 'dark';
-  currentCategory: string;
-  handleCategoryChange: (category: string) => void;
-}
+import { useAppContext } from '../context/AppContext';
 
 export function StartupsPage() {
-  const { handleCategoryChange } = useOutletContext<LayoutContext>();
+  const { handleCategoryChange } = useAppContext();
 
   const startupArticles = articles.filter(article => article.category === 'startups');
   
