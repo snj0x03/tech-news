@@ -14,6 +14,7 @@ export function ArticleCard({ article, onCategoryClick }: ArticleCardProps) {
   const handleCardClick = () => {
     console.log('Article card clicked, navigating to:', `/article/${article.id}`);
     navigate(`/article/${article.id}`);
+    navigate(0);
   };
 
   return (

@@ -57,15 +57,6 @@ export function ArticleDetail() {
     <div className="container-fluid py-4">
       <div className="row justify-content-center">
         <div className="col-lg-8">
-          {/* Back Button */}
-          <button 
-            className="btn btn-outline-secondary mb-4 d-flex align-items-center"
-            onClick={() => navigate(-1)}
-          >
-            <ArrowLeft size={18} className="me-2" />
-            Back
-          </button>
-
           {/* Article Header */}
           <article className="mb-5">
             {/* Category Badge */}

@@ -67,6 +67,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
 
   const handleResultClick = (articleId: string) => {
     navigate(`/article/${articleId}`);
+    navigate(0);
     onClose();
   };
 
