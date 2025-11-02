@@ -25,19 +25,19 @@ export function StartupsPage() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-8">
-              <h1 className="display-4 fw-bold text-white mb-3">
+              <h1 className="display-4 fw-bold mb-3">
                 Startup Ecosystem Hub
               </h1>
-              <p className="lead text-white mb-4">
+              <p className="lead mb-4">
                 Discover emerging tech startups, funding opportunities, and career possibilities. 
                 Connect talented individuals with innovative companies shaping the future.
               </p>
               <div className="d-flex flex-wrap gap-3">
-                <button className="btn btn-light btn-lg fw-semibold">
+                <button className="btn border-0 h-100 shadow-sm btn-lg fw-semibold">
                   <Target className="me-2" size={20} />
                   Find Opportunities
                 </button>
-                <button className="btn btn-outline-light btn-lg">
+                <button className="btn border-0 h-100 shadow-sm btn-lg fw-semibold">
                   <Users className="me-2" size={20} />
                   Join Community
                 </button>

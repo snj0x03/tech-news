@@ -15,7 +15,7 @@ export function Header({ currentCategory, onCategoryChange, theme, onThemeToggle
   const navigate = useNavigate();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
-    <header className="sticky-top border-bottom bg-white" style={{ zIndex: 1050 }}>
+    <header className="sticky-top border-bottom" style={{ zIndex: 1050 }}>
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg navbar-light">
           {/* Logo */}
@@ -47,11 +47,7 @@ export function Header({ currentCategory, onCategoryChange, theme, onThemeToggle
                 <li key={category.id} className="nav-item">
                   <button
                     onClick={() => onCategoryChange(category.id)}
-                    className={`nav-link btn btn-link text-decoration-none text-uppercase fw-semibold px-3 ${
-                      currentCategory === category.id
-                        ? 'text-dark'
-                        : 'text-muted'
-                    }`}
+                    className={`nav-link btn btn-link text-decoration-none text-uppercase fw-semibold px-3`}
                     style={{
                       borderBottom: currentCategory === category.id 
                         ? `3px solid ${category.color}` 
@@ -75,7 +71,7 @@ export function Header({ currentCategory, onCategoryChange, theme, onThemeToggle
                 title="Search (Ctrl+K)"
               >
                 <Search size={20} />
-                <span className="d-none d-lg-inline ms-2 small text-muted">Ctrl+K</span>
+                <span className="d-none d-lg-inline ms-2 small text-muted">Search</span>
               </button>
               <button
                 onClick={onThemeToggle}

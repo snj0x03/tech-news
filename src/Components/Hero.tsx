@@ -13,6 +13,7 @@ export function Hero({ article, onCategoryChange }: HeroProps) {
 
   const handleHeroClick = () => {
     navigate(`/article/${article.id}`);
+    navigate(0);
   };
 
   return (
@@ -42,14 +43,14 @@ export function Hero({ article, onCategoryChange }: HeroProps) {
                 className="btn btn-sm text-white text-uppercase fw-bold mb-3"
                 style={{ 
                   backgroundColor: categoryColor,
-                  fontSize: '0.875rem',
+                  fontSize: '0.825rem',
                   letterSpacing: '0.1em'
                 }}
               >
                 {categoryName}
               </button>
               
-              <h1 className="display-4 fw-bold text-white mb-4 lh-sm">
+              <h1 className="display-4 fw-bold text-white mb-4 lh-sm" style={{fontSize: '1.75rem'}}>
                 {article.title}
               </h1>
               
