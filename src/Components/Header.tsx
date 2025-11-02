@@ -15,7 +15,7 @@ export function Header({ currentCategory, onCategoryChange, theme, onThemeToggle
   const navigate = useNavigate();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
-    <header className="sticky-top border-bottom" style={{ zIndex: 1050 }}>
+    <header className="sticky-top border-bottom" style={{ zIndex: 1030, backgroundColor: theme === 'light' ? '#fff' : '#121212' }}>
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg navbar-light">
           {/* Logo */}
