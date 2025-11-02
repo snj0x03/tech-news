@@ -9,7 +9,11 @@ export function ArticleDetail() {
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
 
+  console.log('ArticleDetail - ID from params:', id);
+  console.log('ArticleDetail - Articles available:', articles.length);
+  
   const article = articles.find(a => a.id === id);
+  console.log('ArticleDetail - Found article:', !!article);
   
   if (!article) {
     return (

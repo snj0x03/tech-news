@@ -1,12 +1,8 @@
-import { ReactNode } from 'react';
-import { useAppContext } from '../context/AppContext';
+import { Outlet } from 'react-router-dom';
+import { AppProvider, useAppContext } from '../context/AppContext';
 import { Header } from './Header';
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-export function Layout({ children }: LayoutProps) {
+function LayoutContent() {
   const { theme, currentCategory, handleCategoryChange, toggleTheme } = useAppContext();
 
   return (
@@ -17,7 +13,15 @@ export function Layout({ children }: LayoutProps) {
         theme={theme}
         onThemeToggle={toggleTheme}
       />
-      {children}
+      <Outlet />
     </div>
+  );
+}
+
+export function Layout() {
+  return (
+    <AppProvider>
+      <LayoutContent />
+    </AppProvider>
   );
 }
