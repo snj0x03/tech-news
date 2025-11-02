@@ -8,6 +8,7 @@ interface SidebarProps {
 
 export function Sidebar({ trendingArticles, editorsPicks }: SidebarProps) {
   const navigate = useNavigate();
+  
 
   const renderArticleItem = (article: Article) => (
     <div 

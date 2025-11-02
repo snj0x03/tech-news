@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, User, Share2, Bookmark, Heart } from 'lucide-react';
+import { Calendar, Clock, User, Share2, Bookmark, Heart } from 'lucide-react';
 import { articles, categories } from '../data/articles';
 import { useState } from 'react';
 

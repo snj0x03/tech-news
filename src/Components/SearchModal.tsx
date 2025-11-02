@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSearch } from '../hooks/useSearch';
 import { Article } from '../data/articles';
-import { Search, X, History, ArrowRight } from 'lucide-react';
+import { Search, History, ArrowRight } from 'lucide-react';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -87,7 +87,6 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
                   className="btn-close ms-auto"
                   onClick={onClose}
                 >
-                  <X size={20} />
                 </button>
               </div>
               
