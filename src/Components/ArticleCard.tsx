@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { Article, categories } from '../data/articles';
 
 interface ArticleCardProps {
@@ -7,12 +6,12 @@ interface ArticleCardProps {
 }
 
 export function ArticleCard({ article, onCategoryClick }: ArticleCardProps) {
-  const navigate = useNavigate();
   const categoryColor = categories.find((c) => c.id === article.category)?.color || '#007AFF';
   const categoryName = categories.find((c) => c.id === article.category)?.name || article.category;
 
   const handleCardClick = () => {
-    navigate(`/article/${article.id}`);
+    console.log('Article card clicked, navigating to:', `/article/${article.id}`);
+    window.location.href = `/article/${article.id}`;
   };
 
   return (

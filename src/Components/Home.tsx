@@ -1,18 +1,12 @@
-import { useOutletContext } from 'react-router-dom';
+import { useAppContext } from '../context/AppContext';
 import { Hero } from './Hero';
 import { NewsBoard } from './NewsBoard';
 import { Sidebar } from './Sidebar';
 import { StartupsPage } from './StartupsPage';
 import { articles, trendingArticles, editorsPicks } from '../data/articles';
 
-interface LayoutContext {
-  theme: 'light' | 'dark';
-  currentCategory: string;
-  handleCategoryChange: (category: string) => void;
-}
-
 export function Home() {
-  const { currentCategory, handleCategoryChange } = useOutletContext<LayoutContext>();
+  const { currentCategory, handleCategoryChange } = useAppContext();
 
   // If startups category is selected, show the specialized startups page
   if (currentCategory === 'startups') {
