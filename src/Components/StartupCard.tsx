@@ -14,6 +14,7 @@ export function StartupCard({ article, onCategoryClick }: StartupCardProps) {
 
   const handleCardClick = () => {
     navigate(`/article/${article.id}`);
+    navigate(0);
   };
 
   // Extract startup info from title and excerpt
